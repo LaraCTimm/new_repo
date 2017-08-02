@@ -91,6 +91,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
-    <File Name="guessing_game.cpp"/>
+    <File Name="guessing_game.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="complex.cpp" ExcludeProjConfig=""/>
   </VirtualDirectory>
 </CodeLite_Project>

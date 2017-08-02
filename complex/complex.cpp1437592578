@@ -17,7 +17,7 @@ int main()
     cout << "The answer is: " << answer << endl;
     cout << "Or in a more familiar form: " << answer.real() << " + " << answer.imag() << "j" << endl;
 
-    // answer++;
+    answer++;
 
     return 0;
 }

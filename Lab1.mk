@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Lara
-Date                   :=28/07/2017
+Date                   :=02/08/2017
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/guessing_game.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/complex.cpp$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/guessing_game.cpp$(ObjectSuffix): guessing_game.cpp $(IntermediateDirectory)/guessing_game.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/l_tim/Google Drive/1 Electrical 3rd Year/Sofware_II/Labs/elen3009-lab1/guessing_game.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/guessing_game.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/guessing_game.cpp$(DependSuffix): guessing_game.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/guessing_game.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/guessing_game.cpp$(DependSuffix) -MM "guessing_game.cpp"
+$(IntermediateDirectory)/complex.cpp$(ObjectSuffix): complex.cpp $(IntermediateDirectory)/complex.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/l_tim/Google Drive/1 Electrical 3rd Year/Sofware_II/Labs/elen3009-lab1/complex.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/complex.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/complex.cpp$(DependSuffix): complex.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/complex.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/complex.cpp$(DependSuffix) -MM "complex.cpp"
 
-$(IntermediateDirectory)/guessing_game.cpp$(PreprocessSuffix): guessing_game.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/guessing_game.cpp$(PreprocessSuffix) "guessing_game.cpp"
+$(IntermediateDirectory)/complex.cpp$(PreprocessSuffix): complex.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/complex.cpp$(PreprocessSuffix) "complex.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
