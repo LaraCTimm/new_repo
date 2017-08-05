@@ -92,6 +92,7 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="guessing_game.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="complex.cpp" ExcludeProjConfig=""/>
+    <File Name="complex.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="quadratic_eqn.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

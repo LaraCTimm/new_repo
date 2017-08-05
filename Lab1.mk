@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Lara
-Date                   :=02/08/2017
+Date                   :=05/08/2017
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/complex.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/quadratic_eqn.cpp$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/complex.cpp$(ObjectSuffix): complex.cpp $(IntermediateDirectory)/complex.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/l_tim/Google Drive/1 Electrical 3rd Year/Sofware_II/Labs/elen3009-lab1/complex.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/complex.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/complex.cpp$(DependSuffix): complex.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/complex.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/complex.cpp$(DependSuffix) -MM "complex.cpp"
+$(IntermediateDirectory)/quadratic_eqn.cpp$(ObjectSuffix): quadratic_eqn.cpp $(IntermediateDirectory)/quadratic_eqn.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/l_tim/Google Drive/1 Electrical 3rd Year/Sofware_II/Labs/elen3009-lab1/quadratic_eqn.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/quadratic_eqn.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/quadratic_eqn.cpp$(DependSuffix): quadratic_eqn.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/quadratic_eqn.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/quadratic_eqn.cpp$(DependSuffix) -MM "quadratic_eqn.cpp"
 
-$(IntermediateDirectory)/complex.cpp$(PreprocessSuffix): complex.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/complex.cpp$(PreprocessSuffix) "complex.cpp"
+$(IntermediateDirectory)/quadratic_eqn.cpp$(PreprocessSuffix): quadratic_eqn.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/quadratic_eqn.cpp$(PreprocessSuffix) "quadratic_eqn.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
