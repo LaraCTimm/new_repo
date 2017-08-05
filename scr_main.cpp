@@ -39,7 +39,7 @@ int main()
     myScreen.down();
     myScreen.set('*');
     myScreen.down();
-    myScreen.set('******');
+    myScreen.set("******");
     myScreen.display();
 
 	return 0;
