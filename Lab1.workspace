@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Lab1" Database="">
   <Project Name="Lab1" Path="Lab1.project" Active="No"/>
-  <Project Name="ScreenProject" Path="ScreenProject.project" Active="Yes"/>
+  <Project Name="ScreenProject" Path="ScreenProject.project" Active="No"/>
+  <Project Name="Stopwatch" Path="Stopwatch.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="Lab1" ConfigName="Debug"/>
       <Project Name="ScreenProject" ConfigName="Debug"/>
+      <Project Name="Stopwatch" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="Lab1" ConfigName="Release"/>
       <Project Name="ScreenProject" ConfigName="Release"/>
+      <Project Name="Stopwatch" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

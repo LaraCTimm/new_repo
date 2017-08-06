@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ ScreenProject - Debug ]----------"
-	@"$(MAKE)" -f  "ScreenProject.mk"
+	@echo "----------Building project:[ Stopwatch - Debug ]----------"
+	@"$(MAKE)" -f  "Stopwatch.mk"
 clean:
-	@echo "----------Cleaning project:[ ScreenProject - Debug ]----------"
-	@"$(MAKE)" -f  "ScreenProject.mk" clean
+	@echo "----------Cleaning project:[ Stopwatch - Debug ]----------"
+	@"$(MAKE)" -f  "Stopwatch.mk" clean
