@@ -201,3 +201,35 @@ string::size_type Screen::row() const
 	return (_cursor + _width)/_width;
 }
 
+enum class Direction: int {HOME, FORWARD, BACK, UP, DOWN, END};
+
+void Screen::move( Direction dir )
+{   // move _cursor to absolute position
+	// valid screen position?
+    switch(dir) {
+    case Direction::HOME: 
+            home();
+            break;
+    case Direction::FORWARD: 
+            forward();
+            break;
+    case Direction::BACK: 
+            back();
+            break;
+    case Direction::UP: 
+            up();
+            break;
+    case Direction::DOWN: 
+            down();
+            break;
+    case Direction::END: 
+            end();
+            break;
+    default: cerr << "Invalid direction.";
+    }
+	return;
+}
+/* This member function is not really necessary for clients of screen as all the 
+ * contained functions are already declared in he header file screen.h. They can 
+ * be made use of by the main function without declaring this function.
+ */

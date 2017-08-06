@@ -4,6 +4,9 @@
 
 using namespace std;
 
+    enum Direction: int {HOME, FORWARD, BACK, UP, DOWN, END};
+
+
 int main()
 {
 	Screen myScreen{6,6};
@@ -40,7 +43,16 @@ int main()
     myScreen.set('*');
     myScreen.down();
     myScreen.set("******");
+    //myScreen.display();
+    
+    myScreen.move(Screen::Direction::HOME);
+    myScreen.move(Screen::Direction::DOWN);
+    myScreen.move(Screen::Direction::DOWN);
+    myScreen.move(Screen::Direction::BACK);
+    myScreen.set("*");
     myScreen.display();
+
+
 
 	return 0;
 }
