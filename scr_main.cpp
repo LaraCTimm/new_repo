@@ -84,7 +84,7 @@ int main()
 //	myScreen.set("SCREEN");
 //	myScreen.display();
     
-    // Make the first letter of my name, L, diaplay
+// Make the first letter of my name, L, diaplay
     myScreen.clear(' ');
     myScreen.set('*');
     myScreen.down();
@@ -99,7 +99,7 @@ int main()
     myScreen.set("******");
     myScreen.display();
     
-    // Overload Move function
+// Overload Move function
     myScreen.move(Screen::Direction::HOME);
     myScreen.move(Screen::Direction::DOWN);
     myScreen.move(Screen::Direction::DOWN);
@@ -107,7 +107,7 @@ int main()
     myScreen.set("*");
     myScreen.display();
     
-    // Include UP and DOWN Wrap-around
+// Include UP and DOWN Wrap-around
     myScreen.move(Screen::Direction::HOME);
     myScreen.move(Screen::Direction::UP);
     myScreen.set("----");
@@ -120,7 +120,7 @@ int main()
     myScreen.set("--");
     myScreen.display();
     
-    // Draw a square on the screen.
+// Draw a square on the screen.
     myScreen.clear(' ');
     drawSquare(3,3,6);
     
@@ -133,6 +133,27 @@ int main()
      * but is not a undamental screen function so it should not be included in 
      * screen.cpp. 
      * */
+     
+// Representation of Screen class as a string
+     
+     /* To prevent the public interface having to change, converting between the 
+      * 'string::size_type' and a more intuative type like an 'int' would make 
+      * the algabaic operations which are computed withing screen.cpp make more 
+      * sense. 
+      * To achieve this, at the beginning of each function in screen.cpp which makes 
+      * use of 'string::size_type', a new 'int' which contains the value in  
+      * 'string::size_type' should be initialised; and following this, these integers 
+      * should be used for algebraic operations.
+      * 
+      * It is important to aviod changing the interface contained in the header file
+      * because if you do, all other instances of those functions have to be altered 
+      * accordingly. This is in both the screen.cpp file as well as in the scr_main.cpp.
+      * If these uses of the function definitions in the header are not identical, the 
+      * program will crash.
+      * Changing the implementatio of the header file in screen.cpp is okay because
+      * the way the function header is defined does not change and thus all calls made 
+      * to the function can remain the same, preventing errors and much hastle later on.
+      * */
 
 	return 0;
 }
