@@ -2,6 +2,12 @@
 
 // 0 represents the top-left screen element
 const string::size_type TOP_LEFT = 0;
+/*
+This const ensures that the top left position of the screen cannot be changed. 
+It is a reference point on the screen and must remain constant.
+Const ensures the value of the variable can't be changed at a later stage in 
+the program.
+*/
 
 // Screen's constructor
 Screen::Screen(string::size_type height, string::size_type width, char bkground):
@@ -86,6 +92,12 @@ void Screen::set( char ch )
 	return;
 }
 
+/*
+ * The reference give two typs of functionality, don't create a duplicate of value in memory (waste memory)
+ * allows you alter value in function and have the new value outside of the function.
+ * Adding the const keyword to the reference gives you situation where you don' make a copy 
+ * but prevents accidental overwriting of value stored in memory.
+*/
 void Screen::set( const string& s )
 {   // write string beginning at current _cursor position
 	auto space = remainingSpace();
@@ -118,6 +130,9 @@ void Screen::clear( char bkground )
 	return;
 }
 
+// The string's at member function returns the character which is present at 
+// the specified position in the string.
+
 void Screen::reSize( string::size_type h, string::size_type w, char bkground )
 {   // can only *increase* a screen's size to height h and width w
 	// remember the content of the screen
@@ -145,6 +160,12 @@ void Screen::reSize( string::size_type h, string::size_type w, char bkground )
 
 	return;
 }
+
+
+/*
+Adding const keyword here prevents these functions from being overloaded 
+elsewhere in the code
+*/
 
 void Screen::display() const
 {
