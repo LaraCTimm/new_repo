@@ -30,7 +30,8 @@ int main()
 //	myScreen.move(8,5);
 //	myScreen.set("SCREEN");
 //	myScreen.display();
-
+    
+    // Make the first letter of my name, L, diaplay
     myScreen.clear(' ');
     myScreen.set('*');
     myScreen.down();
@@ -45,12 +46,27 @@ int main()
     myScreen.set("******");
     //myScreen.display();
     
+    // Overload Move function
     myScreen.move(Screen::Direction::HOME);
     myScreen.move(Screen::Direction::DOWN);
     myScreen.move(Screen::Direction::DOWN);
     myScreen.move(Screen::Direction::BACK);
     myScreen.set("*");
+    //myScreen.display();
+    
+    // Include UP and DOWN Wrap-around
+    myScreen.move(Screen::Direction::HOME);
+    myScreen.move(Screen::Direction::UP);
+    myScreen.set("----");
     myScreen.display();
+    
+    myScreen.move(Screen::Direction::END);
+    myScreen.move(Screen::Direction::DOWN);
+    myScreen.move(Screen::Direction::BACK);
+    myScreen.move(Screen::Direction::BACK);
+    myScreen.set("--");
+    myScreen.display();
+    
 
 
 
